@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <meta charset ="UTF-8">
+        <meta name = "viewport" content="width=device-width, initial-scale = 1.0">
+        <title>DOM API - Assignment 1</title>
+    </head>
+    <body>
+        <button onClick="myFirstFunction()">Click Me to add text!!</button>
+        </br></br>
+        <button onClick="mySecondFunction()">Click Me again to add text!!</button>
+
+        <script>
+            var x = document.body;
+            x.style.backgroundColor="lightgrey"; 
+
+            function myFirstFunction(){
+                var firstP = document.createElement("p");
+                firstP.innerText = "The Document Object Model (DOM) is a programming interface for HTML and XML documents." 
+                                    +"It represents the page so that"
+                                    + "programs can change the document structure, style, and content. The DOM represents"
+                                    +"the document as nodes and objects. That way, programming languages can connect to"
+                                    +"the page.";
+                firstP.style.color = "purple";
+                x.appendChild(firstP);
+            }
+            
+            function mySecondFunction(){
+                var secP = document.createElement("p");                
+                secP.innerText = "A Web page is a document. This document"
+                                +"can be either displayed in the browser window or as the HTML source. But it is the same"
+                                +"document in both cases. The Document Object Model (DOM) represents that same"
+                                +"document so it can be manipulated. The DOM is an object-oriented representation of"
+                                +"the web page, which can be modified with a scripting language such as JavaScript.";
+                secP.style.color="red";
+                x.appendChild(secP);                               
+            }            
+        </script>
+    </body>
+</html>
